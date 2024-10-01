@@ -3,7 +3,7 @@ import logo from "../assets/frontend_assets/logo.png";
 
 const Footer = () => {
   return (
-    <div className="px-4 md:px-4 lg:px-28 xs:flex justify-between mb-10 mt-28">
+    <div className="px-4 md:px-4 lg:px-28 xs:flex justify-between mb-10 mt-20 xs:mt-32">
       <div>
         <div>
           <img src={logo} className="w-36 cursor-pointer" alt="logo" />
