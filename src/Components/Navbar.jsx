@@ -18,7 +18,7 @@ const Navbar = () => {
   const menuItems = ["Home", "Collection", "About", "Contact", "Admin Panel"];
 
   return (
-    <nav className="w-full fit py-4 flex justify-between relative z-10 custom-padding">
+    <nav className="w-full fit py-4 flex justify-between relative z-10 custom-padding border-b border-fray-500">
       <NavLink to="/">
         <div>
           <img src={logo} className="w-36 cursor-pointer" alt="logo" />
