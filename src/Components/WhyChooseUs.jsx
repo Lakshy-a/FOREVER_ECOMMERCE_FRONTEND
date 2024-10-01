@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
       </div>
       <div className="mt-8 xs:flex">
         {chooseUs.map((item, index) => (
-          <ChoosingReasons item={item} />
+          <ChoosingReasons key={index} item={item} />
         ))}
       </div>
     </div>

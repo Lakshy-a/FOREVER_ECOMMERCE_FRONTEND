@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "../assets/frontend_assets/logo.png";
+import {NavLink} from "react-router-dom"
+import ScrollToTop from "./ScrollToTop"
 
 const Footer = () => {
   return (
@@ -18,10 +20,10 @@ const Footer = () => {
       <div>
         <div className="uppercase text-xl font-semibold mt-10 xs:mt-0">Company</div>
         <ul className="mt-4 text-sm font-normal">
-            <li className="mt-1 cursor-pointer">Home</li>
-            <li className="mt-1 cursor-pointer">About Us</li>
-            <li className="mt-1 cursor-pointer">Delivery</li>
-            <li className="mt-1 cursor-pointer">Privacy Policy</li>
+            <NavLink to="/"><li className="mt-1 cursor-pointer">Home</li></NavLink>
+            <NavLink to="/about"><li className="mt-1 cursor-pointer">About Us</li></NavLink>
+            <NavLink to="deliveryPolicy"><li className="mt-1 cursor-pointer">Delivery</li></NavLink>
+            <NavLink to="/privacyPolicy"><li className="mt-1 cursor-pointer">Privacy Policy</li></NavLink>
         </ul>
       </div>
       <div>
@@ -30,6 +32,7 @@ const Footer = () => {
             <li className="mt-1">+1-000-000-0000</li>
             <li className="mt-1 cursor-pointer">forever@gmail.com</li>
             <li className="mt-1 cursor-pointer">Instagram</li>
+           <NavLink to="/contact"> <li className="mt-1 cursor-pointer">Contact Us</li></NavLink>
         </ul>
       </div>
     </div>

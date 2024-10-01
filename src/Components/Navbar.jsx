@@ -15,34 +15,36 @@ const Navbar = () => {
     setIsNavOpen(!isNavOpen);
   };
 
-  const menuItems = ["Home", "Collection", "About", "Contact", "Admin Panel"];
+  const menuItems = [
+    { name: "Home", path: "/" },
+    { name: "Collection", path: "/collection" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
-    <nav className="w-full fit py-4 flex justify-between relative z-10 custom-padding border-b border-fray-500">
+    <nav className="w-full fit py-4 flex justify-between relative z-10 custom-padding border-b border-gray-200">
       <NavLink to="/">
         <div>
           <img src={logo} className="w-36 cursor-pointer" alt="logo" />
         </div>
       </NavLink>
       <div className="hidden xs:flex items-center gap-6">
-        <NavLink to="/">
-          <div className="uppercase text-sm font-semibold text-gray-700 cursor-pointer">
-            Home
-          </div>
-        </NavLink>
-        <div className="uppercase text-sm font-semibold text-gray-700 cursor-pointer">
-          Collection
-        </div>
-        <NavLink to="/about">
-          <div className="uppercase text-sm font-semibold text-gray-700 cursor-pointer">
-            About
-          </div>
-        </NavLink>
-        <NavLink to="contact">
-          <div className="uppercase text-sm font-semibold text-gray-700 cursor-pointer">
-            Contact
-          </div>
-        </NavLink>
+        {menuItems.map(({ name, path }) => (
+          <NavLink
+            to={path}
+            key={name}
+            className={({ isActive }) =>
+              `uppercase text-sm font-semibold cursor-pointer ${
+                isActive
+                  ? "text-black border-b-2 border-black"
+                  : "text-gray-700"
+              }`
+            }
+          >
+            {name}
+          </NavLink>
+        ))}
         <div className="uppercase text-xs border border-black px-3 py-1 rounded-full font-semibold text-gray-700 cursor-pointer">
           Admin Panel
         </div>
@@ -78,10 +80,10 @@ const Navbar = () => {
       <div
         className={`${
           isNavOpen ? "translate-x-0" : "translate-x-full"
-        } fixed w-full h-screen bg-white z-10 duration-500 `}
+        } fixed w-full h-screen bg-white z-10 duration-500`}
       >
         <div
-          className="cursor-pointer  flex gap-2 items-center"
+          className="cursor-pointer flex gap-2 items-center"
           onClick={handleNavOpen}
         >
           <span className="text-xl text-gray-500">
@@ -90,8 +92,8 @@ const Navbar = () => {
           <div className="text-gray-500 text-lg font-semibold">Back</div>
         </div>
         <div className="flex flex-col items-start gap-2 mt-4 ">
-          {menuItems.map((item, index) => (
-            <MenuItem item={item} key={index} />
+          {menuItems.map(({ name, path }, index) => (
+            <MenuItem item={name} key={index} />
           ))}
         </div>
       </div>
