@@ -1,10 +1,13 @@
 import React from "react";
 import SubscribeNow from "./SubscribeNow";
+import Banner from "./Banner";
 
 const HomePage = () => {
   return (
     <>
-      <div className="custom-padding">This is the home page...</div>
+      <div className="custom-padding">
+        <Banner />
+      </div>
       <SubscribeNow />
     </>
   );

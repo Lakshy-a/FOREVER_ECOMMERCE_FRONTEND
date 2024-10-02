@@ -2,7 +2,7 @@ import React from "react";
 
 const SubscribeNow = () => {
   return (
-    <div className="custom-padding xs:mt-28 mt-20">
+    <div className="px-4 xs:custom-padding xs:mt-28 mt-20">
       <h2 className="text-2xl font-semibold text-center">
         Subscribe now & get 20% off
       </h2>
