@@ -3,10 +3,12 @@ import SubscribeNow from "./SubscribeNow";
 import SingleProduct from "./SingleProduct";
 import Filters from "./Filters";
 import { GoHorizontalRule } from "react-icons/go";
-import dropdown_icon from "../assets/frontend_assets/dropdown_icon.png";
 import { FaChevronRight } from "react-icons/fa6";
+import SearchBar from "./SearchBar"
 
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
+import { closeSearchBar } from "../slices/searchBar/searchBarSlice";
 
 const filtersData = [
   {
@@ -24,13 +26,30 @@ const CollectionPage = () => {
 
   const products = useSelector((state) => state.products.products);
 
+  const isSearchBarOpen = useSelector(
+    (state) => state.searchBar.isSearchBarOpen
+  );
+
   const handleFilterClick = () => {
     setIsFilterOpen(!isFilterOpen);
   };
 
+  const dispatch = useDispatch();
+
+  const handleCloseSearchBar = () => {
+    dispatch(closeSearchBar());
+  };
+
   return (
-    <div className="custom-padding mt-12">
-      <div className="xs:flex gap-16">
+    <div className="custom-padding mt-8">
+      <div
+        className={`${
+          isSearchBarOpen ? "block" : "hidden"
+        } flex justify-center cursor-pointer`}
+      >
+        <SearchBar />
+      </div>
+      <div className="xs:flex gap-16 mt-12">
         <div>
           <div
             className="text-xl font-semibold flex items-center gap-2 uppercase  mt-2"

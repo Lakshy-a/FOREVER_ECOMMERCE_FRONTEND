@@ -6,10 +6,15 @@ import search_icon from "../assets/frontend_assets/search_icon.png";
 import profile_icon from "../assets/frontend_assets/profile_icon.png";
 import menu_icon from "../assets/frontend_assets/menu_icon.png";
 import MenuItem from "./MenuItem";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { openSearchBar } from "../slices/searchBar/searchBarSlice";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  // const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.searchBar.isSearchBarOpen)
 
   const handleNavOpen = () => {
     setIsNavOpen(!isNavOpen);
@@ -21,6 +26,14 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
   ];
+
+  const handleSearchClick = () => {
+    navigate("/collection");
+    dispatch(openSearchBar());
+    // console.log(selector);
+  };
+
+  const navigate = useNavigate();
 
   return (
     <nav className="w-full fit py-4 flex justify-between relative z-10 custom-padding border-b border-gray-200">
@@ -50,7 +63,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center gap-4 sm:gap-6">
-        <div>
+        <div onClick={handleSearchClick}>
           <img src={search_icon} className="w-5 cursor-pointer" alt="search" />
         </div>
         <div>
@@ -92,7 +105,7 @@ const Navbar = () => {
           <div className="text-gray-500 text-lg font-semibold">Back</div>
         </div>
         <div className="flex flex-col items-start gap-2 mt-4 ">
-          {menuItems.map(({ name, path }, index) => (
+          {menuItems.map(({ name }, index) => (
             <MenuItem item={name} key={index} />
           ))}
         </div>
