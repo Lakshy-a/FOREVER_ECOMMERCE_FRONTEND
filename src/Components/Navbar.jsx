@@ -14,7 +14,7 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   // const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const dispatch = useDispatch();
-  const selector = useSelector((state) => state.searchBar.isSearchBarOpen)
+  const selector = useSelector((state) => state.searchBar.isSearchBarOpen);
 
   const handleNavOpen = () => {
     setIsNavOpen(!isNavOpen);
@@ -66,13 +66,15 @@ const Navbar = () => {
         <div onClick={handleSearchClick}>
           <img src={search_icon} className="w-5 cursor-pointer" alt="search" />
         </div>
-        <div>
-          <img
-            src={profile_icon}
-            className="w-5 cursor-pointer"
-            alt="profile"
-          />
-        </div>
+        <NavLink to={"/login"}>
+          <div>
+            <img
+              src={profile_icon}
+              className="w-5 cursor-pointer"
+              alt="profile"
+            />
+          </div>
+        </NavLink>
         <div className="relative">
           <img src={cart_icon} className="w-5 cursor-pointer" alt="cart" />
           <div className="absolute top-3 left-3 bg-black rounded-full px-1 text-xs text-white font-semibold">

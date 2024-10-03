@@ -17,9 +17,11 @@ const SearchBar = () => {
         <input
           type="text"
           placeholder="Search"
-          className="outline-none text-sm "
+          className="outline-none text-sm w-full "
         />
-        <img src={search_icon} alt="search_icon" className="w-4 h-4" />
+        <div className="w-4">
+          <img src={search_icon} alt="search_icon" className="w-4 h-4" />
+        </div>
       </div>
       <div className="">
         <img

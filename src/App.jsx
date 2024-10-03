@@ -9,6 +9,10 @@ import PrivacyPolicy from "./Components/PrivacyPolicy";
 import DeliveryPolicy from "./Components/DeliveryPolicy";
 import ScrollToTop from "./Components/ScrollToTop";
 import CollectionPage from "./Components/CollectionPage"
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
+import ForgotPassword from "./Components/ForgotPassword"
+import ProductPage from "./Components/ProductPage";
 
 function App() {
   return (
@@ -24,6 +28,10 @@ function App() {
         <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/deliveryPolicy" element={<DeliveryPolicy />} />
         <Route path="/collection" element={<CollectionPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path={`/product/:id`} element={<ProductPage />} />
       </Routes>
       <Footer />
     </>

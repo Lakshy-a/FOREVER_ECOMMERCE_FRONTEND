@@ -34,12 +34,6 @@ const CollectionPage = () => {
     setIsFilterOpen(!isFilterOpen);
   };
 
-  const dispatch = useDispatch();
-
-  const handleCloseSearchBar = () => {
-    dispatch(closeSearchBar());
-  };
-
   return (
     <div className="custom-padding mt-8">
       <div
