@@ -15,7 +15,7 @@ const Banner = () => {
           </h2>
         </div>
         <h1 className="text-4xl font-serif font-medium">Latest Arrivals</h1>
-        <h2 className="uppercase text-sm text-black font-semibold flex items-center justify-start w-56">
+        <h2 className="uppercase text-sm text-black font-semibold flex items-center justify-start w-56 mt-1">
           Shop Now
           <span className="text-black ml-2">
             <GoHorizontalRule />
