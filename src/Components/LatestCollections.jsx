@@ -7,7 +7,7 @@ const LatestCoection = () => {
   const products = useSelector((state) => state.products.products);
 
   const sortedProducts = [...products].sort((a, b) => b.date - a.date);
-  console.log(sortedProducts);
+  // console.log(sortedProducts);
 
   return (
     <>

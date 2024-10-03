@@ -1,12 +1,10 @@
-import React from "react";
-import p_img1 from "../assets/frontend_assets/p_img1.png";
 import { useNavigate } from "react-router-dom";
 
 const SingleProduct = ({ product }) => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="mt-4 cursor-pointer" onClick={() => navigate(`/product/aaaaa`)}>
+      <div className="mt-4 cursor-pointer" onClick={() => navigate(`/product/${product._id}`)}>
         <div className="overflow-hidden">
           <img
             className="hover:scale-110 duration-200 "
