@@ -14,11 +14,12 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   // const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const dispatch = useDispatch();
-  const selector = useSelector((state) => state.searchBar.isSearchBarOpen);
 
   const handleNavOpen = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  const cartCount = useSelector((state) => state.cart.cartCount);
 
   const menuItems = [
     { name: "Home", path: "/" },
@@ -30,7 +31,6 @@ const Navbar = () => {
   const handleSearchClick = () => {
     navigate("/collection");
     dispatch(openSearchBar());
-    // console.log(selector);
   };
 
   const navigate = useNavigate();
@@ -75,12 +75,14 @@ const Navbar = () => {
             />
           </div>
         </NavLink>
-        <div className="relative">
-          <img src={cart_icon} className="w-5 cursor-pointer" alt="cart" />
-          <div className="absolute top-3 left-3 bg-black rounded-full px-1 text-xs text-white font-semibold">
-            0
+        <NavLink to={"/cart"}>
+          <div className="relative">
+            <img src={cart_icon} className="w-5 cursor-pointer" alt="cart" />
+            <div className="absolute top-3 left-3 bg-black rounded-full px-1 text-xs text-white font-semibold">
+              {cartCount}
+            </div>
           </div>
-        </div>
+        </NavLink>
         <div className="cursor-pointer">
           <img
             src={menu_icon}

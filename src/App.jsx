@@ -8,11 +8,12 @@ import Footer from "./Components/Footer";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
 import DeliveryPolicy from "./Components/DeliveryPolicy";
 import ScrollToTop from "./Components/ScrollToTop";
-import CollectionPage from "./Components/CollectionPage"
+import CollectionPage from "./Components/CollectionPage";
 import Login from "./Components/Login";
 import SignUp from "./Components/SignUp";
-import ForgotPassword from "./Components/ForgotPassword"
+import ForgotPassword from "./Components/ForgotPassword";
 import ProductPage from "./Components/ProductPage";
+import Cart from "./Components/Cart";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path={`/product/:id`} element={<ProductPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </>

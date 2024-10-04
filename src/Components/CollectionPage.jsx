@@ -4,11 +4,9 @@ import SingleProduct from "./SingleProduct";
 import Filters from "./Filters";
 import { GoHorizontalRule } from "react-icons/go";
 import { FaChevronRight } from "react-icons/fa6";
-import SearchBar from "./SearchBar"
+import SearchBar from "./SearchBar";
 
-import { useSelector, useDispatch } from "react-redux";
-
-import { closeSearchBar } from "../slices/searchBar/searchBarSlice";
+import { useSelector } from "react-redux";
 
 const filtersData = [
   {
@@ -34,6 +32,11 @@ const CollectionPage = () => {
     setIsFilterOpen(!isFilterOpen);
   };
 
+  const handleSearch = (query) => {
+    console.log("Searching for:", query);
+    // Add search logic here (e.g., filtering items, making an API request, etc.)
+  };
+
   return (
     <div className="custom-padding mt-8">
       <div
@@ -41,7 +44,7 @@ const CollectionPage = () => {
           isSearchBarOpen ? "block" : "hidden"
         } flex justify-center cursor-pointer`}
       >
-        <SearchBar />
+        <SearchBar onSearch={handleSearch} />
       </div>
       <div className="xs:flex gap-16 mt-12">
         <div>
