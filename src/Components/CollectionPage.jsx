@@ -5,7 +5,6 @@ import Filters from "./Filters";
 import { GoHorizontalRule } from "react-icons/go";
 import { FaChevronRight } from "react-icons/fa6";
 import SearchBar from "./SearchBar";
-
 import { useSelector } from "react-redux";
 
 const filtersData = [
@@ -21,8 +20,10 @@ const filtersData = [
 
 const CollectionPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [sortedProducts, setSortedProducts] = useState([]);
 
   const products = useSelector((state) => state.products.products);
+  const copiedProducts = [...products];
 
   const isSearchBarOpen = useSelector(
     (state) => state.searchBar.isSearchBarOpen
@@ -37,6 +38,21 @@ const CollectionPage = () => {
     // Add search logic here (e.g., filtering items, making an API request, etc.)
   };
 
+  const handleSortChange = (event) => {
+    const sortBy = event.target.value;
+    let sorted = [];
+
+    if (sortBy === "lowToHigh") {
+      sorted = copiedProducts.sort((a, b) => a.price - b.price);
+    } else if (sortBy === "highToLow") {
+      sorted = copiedProducts.sort((a, b) => b.price - a.price);
+    } else {
+      sorted = copiedProducts; // Default sorting (relevant)
+    }
+
+    setSortedProducts([...sorted]);
+  };
+
   return (
     <div className="custom-padding mt-8">
       <div
@@ -49,7 +65,7 @@ const CollectionPage = () => {
       <div className="xs:flex gap-16 mt-12">
         <div>
           <div
-            className="text-xl font-semibold flex items-center gap-2 uppercase  mt-2"
+            className="text-xl font-semibold flex items-center gap-2 uppercase mt-2"
             onClick={handleFilterClick}
           >
             <h1 className="cursor-pointer">Filters</h1>{" "}
@@ -74,17 +90,22 @@ const CollectionPage = () => {
               </span>
             </div>
             <div className="mt-8 xs:mt-0">
-              <select className="border border-black py-2 px-1 outline-none">
-                <option className="">Sort by: Relavent</option>
-                <option className="">Sort by: Low To High</option>
-                <option className="">Sort by: High To Low</option>
+              <select
+                className="border border-black py-2 px-1 outline-none"
+                onChange={handleSortChange}
+              >
+                <option value="relevant">Sort by: Relevant</option>
+                <option value="lowToHigh">Sort by: Low To High</option>
+                <option value="highToLow">Sort by: High To Low</option>
               </select>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 lg:grid-cols-4 ">
-            {products.map((product, index) => (
-              <SingleProduct key={index} product={product} />
-            ))}
+            {(sortedProducts.length > 0 ? sortedProducts : products).map(
+              (product, index) => (
+                <SingleProduct key={index} product={product} />
+              )
+            )}
           </div>
         </div>
       </div>

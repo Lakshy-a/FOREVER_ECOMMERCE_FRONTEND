@@ -16,6 +16,7 @@ const ProductDescription = ({ neededProduct }) => {
     productPrice: neededProduct.price,
     productImage: neededProduct.image[0],
     productSize: selectedSize,
+    productQuantity: 1,
   };
 
   const handleAddToCart = () => {

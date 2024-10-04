@@ -10,13 +10,7 @@ const CartProducts = () => {
 
   const dispatch = useDispatch();
 
-  const handleDecreaseCount = () => {
-    dispatch(decrement());
-  };
-
-  const handleIncreaseCount = () => {
-    dispatch(increment());
-  };
+  
 
   return (
     <>

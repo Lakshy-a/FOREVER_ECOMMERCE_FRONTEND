@@ -12,6 +12,15 @@ const ProductsInsideCart = ({ item, index }) => {
     dispatch(decrement(id));
   };
 
+  const handleDecreaseCount = (id) => {
+    dispatch(decrement(id));
+  };
+
+  const handleIncreaseCount = () => {
+    dispatch(increment());
+  };
+
+
   return (
     <div className="flex justify-between mt-8 border border-gray-300 rounded-xl overflow-hidden px-8 items-center">
       <div className="flex gap-5 py-3">
@@ -27,11 +36,11 @@ const ProductsInsideCart = ({ item, index }) => {
         </div>
       </div>
       <div className="flex gap-4 items-center">
-        <span className="text-xl border border-black rounded-md px-2 cursor-pointer">
+        <span className="text-xl border border-black rounded-md px-2 cursor-pointer" onClick={() => handleDecreaseCount(index)}  id={index}>
           -
         </span>
         <span className="text-lg font-semibold">{total}</span>
-        <span className="text-xl border px-2 rounded-md border-black cursor-pointer">
+        <span className="text-xl border px-2 rounded-md border-black cursor-pointer" onClick={handleIncreaseCount}>
           +
         </span>
       </div>
