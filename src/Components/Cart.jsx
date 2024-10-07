@@ -2,6 +2,7 @@ import React from "react";
 import { GoHorizontalRule } from "react-icons/go";
 import { useSelector } from "react-redux";
 import CartProducts from "./CartProducts";
+import CartTotals from "./CartTotals";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -32,6 +33,9 @@ const Cart = () => {
               </div>
             </>
           )}{" "}
+        </div>
+        <div className="flex justify-end mt-20">
+          <CartTotals />
         </div>
       </div>
     </>

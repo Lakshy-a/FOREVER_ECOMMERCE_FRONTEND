@@ -14,6 +14,7 @@ import SignUp from "./Components/SignUp";
 import ForgotPassword from "./Components/ForgotPassword";
 import ProductPage from "./Components/ProductPage";
 import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path={`/product/:id`} element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </>

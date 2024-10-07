@@ -109,8 +109,8 @@ const Navbar = () => {
           <div className="text-gray-500 text-lg font-semibold">Back</div>
         </div>
         <div className="flex flex-col items-start gap-2 mt-4 ">
-          {menuItems.map(({ name }, index) => (
-            <MenuItem item={name} key={index} />
+          {menuItems.map(( item , index) => (
+            <MenuItem item={item} key={index} />
           ))}
         </div>
       </div>
