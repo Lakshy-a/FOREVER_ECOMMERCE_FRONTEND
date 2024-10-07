@@ -9,7 +9,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="custom-padding">
+      <div className="custom-padding w-full h-fit">
         <div className="uppercase text-2xl text-gray-400 font-semibold flex items-center mt-12">
           Your <span className="text-black ml-2">Cart</span>
           <span className="text-black ml-2">

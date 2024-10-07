@@ -69,6 +69,7 @@ const initialState = {
       sizes: ["S", "M", "L"],
       date: 1716634345448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaab",
@@ -82,6 +83,7 @@ const initialState = {
       sizes: ["M", "L", "XL"],
       date: 1716621345448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaac",
@@ -95,6 +97,7 @@ const initialState = {
       sizes: ["S", "L", "XL"],
       date: 1716234545448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaad",
@@ -108,6 +111,7 @@ const initialState = {
       sizes: ["S", "M", "XXL"],
       date: 1716621345448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaae",
@@ -121,6 +125,7 @@ const initialState = {
       sizes: ["M", "L", "XL"],
       date: 1716622345448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaaf",
@@ -134,6 +139,7 @@ const initialState = {
       sizes: ["S", "L", "XL"],
       date: 1716623423448,
       bestseller: true,
+      quantity: 1,
     },
     {
       _id: "aaaag",
@@ -147,6 +153,7 @@ const initialState = {
       sizes: ["S", "L", "XL"],
       date: 1716621542448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaah",
@@ -160,6 +167,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716622345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaai",
@@ -173,6 +181,7 @@ const initialState = {
       sizes: ["M", "L", "XL"],
       date: 1716621235448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaaj",
@@ -186,6 +195,7 @@ const initialState = {
       sizes: ["S", "L", "XL"],
       date: 1716622235448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaak",
@@ -199,6 +209,7 @@ const initialState = {
       sizes: ["S", "M", "L"],
       date: 1716623345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaal",
@@ -212,6 +223,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716624445448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaam",
@@ -225,6 +237,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716625545448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaan",
@@ -238,6 +251,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716626645448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaao",
@@ -251,6 +265,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716627745448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaap",
@@ -264,6 +279,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716628845448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaaq",
@@ -277,6 +293,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716629945448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaar",
@@ -290,6 +307,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716631045448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaas",
@@ -303,6 +321,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716632145448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaat",
@@ -316,6 +335,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716633245448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaau",
@@ -329,6 +349,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716634345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaav",
@@ -342,6 +363,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716635445448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaaw",
@@ -355,6 +377,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716636545448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaax",
@@ -368,6 +391,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716637645448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaay",
@@ -381,6 +405,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716638745448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaaz",
@@ -394,6 +419,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716639845448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaba",
@@ -407,6 +433,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716640945448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabb",
@@ -420,6 +447,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716642045448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabc",
@@ -433,6 +461,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716643145448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabd",
@@ -446,6 +475,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716644245448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabe",
@@ -459,6 +489,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716645345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabf",
@@ -472,6 +503,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716646445448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabg",
@@ -485,6 +517,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716647545448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabh",
@@ -498,6 +531,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716648645448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabi",
@@ -511,6 +545,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716649745448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabj",
@@ -524,6 +559,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716650845448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabk",
@@ -537,6 +573,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716651945448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabl",
@@ -550,6 +587,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716653045448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabm",
@@ -563,6 +601,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716654145448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabn",
@@ -576,6 +615,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716655245448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabo",
@@ -589,6 +629,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716656345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabp",
@@ -602,6 +643,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716657445448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabq",
@@ -615,6 +657,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716658545448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabr",
@@ -628,6 +671,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716659645448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabs",
@@ -641,6 +685,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716660745448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabt",
@@ -654,6 +699,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716661845448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabu",
@@ -667,6 +713,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716662945448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabv",
@@ -680,6 +727,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716664045448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabw",
@@ -693,6 +741,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716665145448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabx",
@@ -706,6 +755,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716666245448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaaby",
@@ -719,6 +769,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716667345448,
       bestseller: false,
+      quantity: 1,
     },
     {
       _id: "aaabz",
@@ -732,6 +783,7 @@ const initialState = {
       sizes: ["S", "M", "L", "XL"],
       date: 1716668445448,
       bestseller: false,
+      quantity: 1,
     },
   ],
 };

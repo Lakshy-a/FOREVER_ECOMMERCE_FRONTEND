@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SubscribeNow from "./SubscribeNow";
 import SingleProduct from "./SingleProduct";
 import Filters from "./Filters";
 import { GoHorizontalRule } from "react-icons/go";
 import { FaChevronRight } from "react-icons/fa6";
 import SearchBar from "./SearchBar";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  resetFilters,
+  setSortingFilter,
+} from "../slices/filterData/filterSlice";
 
 const filtersData = [
   {
@@ -13,21 +17,51 @@ const filtersData = [
     filterValues: ["Men", "Women", "Kids"],
   },
   {
-    filterName: "type",
+    filterName: "subCategories",
     filterValues: ["Topwear", "Bottomwear", "Winterwear"],
   },
 ];
 
 const CollectionPage = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [sortedProducts, setSortedProducts] = useState([]);
-
+  const dispatch = useDispatch();
+  const [filteredProductList, setFilteredProductList] = useState([]);
   const products = useSelector((state) => state.products.products);
-  const copiedProducts = [...products];
-
+  const selectedCategories = useSelector((state) => state.filter.categories);
+  const selectedSubCategories = useSelector(
+    (state) => state.filter.subCategories
+  );
+  const sortingFilter = useSelector((state) => state.filter.sortFilters);
   const isSearchBarOpen = useSelector(
     (state) => state.searchBar.isSearchBarOpen
   );
+  const clearFilter = useSelector((state) => state.filter.clearFilter);
+
+  useEffect(() => {
+    // Filter products based on categories and subcategories
+    let filteredProducts = [...products];
+
+    if (selectedCategories.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedCategories.includes(product.category)
+      );
+    }
+
+    if (selectedSubCategories.length > 0) {
+      filteredProducts = filteredProducts.filter((product) =>
+        selectedSubCategories.includes(product.subCategory)
+      );
+    }
+
+    // Apply sorting
+    if (sortingFilter === "lowToHigh") {
+      filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (sortingFilter === "highToLow") {
+      filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
+    }
+
+    setFilteredProductList(filteredProducts);
+  }, [selectedCategories, selectedSubCategories, sortingFilter, products]);
 
   const handleFilterClick = () => {
     setIsFilterOpen(!isFilterOpen);
@@ -35,26 +69,18 @@ const CollectionPage = () => {
 
   const handleSearch = (query) => {
     console.log("Searching for:", query);
-    // Add search logic here (e.g., filtering items, making an API request, etc.)
   };
 
   const handleSortChange = (event) => {
-    const sortBy = event.target.value;
-    let sorted = [];
+    dispatch(setSortingFilter(event.target.value));
+  };
 
-    if (sortBy === "lowToHigh") {
-      sorted = copiedProducts.sort((a, b) => a.price - b.price);
-    } else if (sortBy === "highToLow") {
-      sorted = copiedProducts.sort((a, b) => b.price - a.price);
-    } else {
-      sorted = copiedProducts; // Default sorting (relevant)
-    }
-
-    setSortedProducts([...sorted]);
+  const handleClearFilters = () => {
+    dispatch(resetFilters());
   };
 
   return (
-    <div className="custom-padding mt-8">
+    <div className="custom-padding mt-8 ">
       <div
         className={`${
           isSearchBarOpen ? "block" : "hidden"
@@ -65,10 +91,13 @@ const CollectionPage = () => {
       <div className="xs:flex gap-16 mt-12">
         <div>
           <div
-            className="text-xl font-semibold flex items-center gap-2 uppercase mt-2"
+            className="text-xl font-semibold flex items-center justify-between gap-2 uppercase mt-2"
             onClick={handleFilterClick}
           >
             <h1 className="cursor-pointer">Filters</h1>{" "}
+            <h1 className="cursor-pointer" onClick={handleClearFilters}>
+              Clear Filters
+            </h1>
             <div className="text-sm text-gray-400 xs:hidden">
               <FaChevronRight />
             </div>
@@ -101,11 +130,9 @@ const CollectionPage = () => {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 mt-4 md:grid-cols-3 lg:grid-cols-4 ">
-            {(sortedProducts.length > 0 ? sortedProducts : products).map(
-              (product, index) => (
-                <SingleProduct key={index} product={product} />
-              )
-            )}
+            {filteredProductList.map((product, index) => (
+              <SingleProduct key={index} product={product} />
+            ))}
           </div>
         </div>
       </div>

@@ -39,7 +39,7 @@ const ProductsInsideCart = ({ item, index }) => {
         <span className="text-xl border border-black rounded-md px-2 cursor-pointer" onClick={() => handleDecreaseCount(index)}  id={index}>
           -
         </span>
-        <span className="text-lg font-semibold">{total}</span>
+        <span className="text-lg font-semibold">{item.productQuantity}</span>
         <span className="text-xl border px-2 rounded-md border-black cursor-pointer" onClick={handleIncreaseCount}>
           +
         </span>
