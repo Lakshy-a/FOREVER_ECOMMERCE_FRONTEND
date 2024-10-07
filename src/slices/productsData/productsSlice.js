@@ -786,6 +786,7 @@ const initialState = {
       quantity: 1,
     },
   ],
+  searchQuery:'',
 };
 
 export const productsSlice = createSlice({
@@ -795,8 +796,11 @@ export const productsSlice = createSlice({
     addproduct: (state, action) => {
       state.products.push(action.payload);
     },
+    setSearchQuery: (state, action) => {
+      state.searchQuery = action.payload;
+    }
   },
 });
 
-export const { addproduct } = productsSlice.actions;
+export const { addproduct, setSearchQuery } = productsSlice.actions;
 export default productsSlice.reducer;

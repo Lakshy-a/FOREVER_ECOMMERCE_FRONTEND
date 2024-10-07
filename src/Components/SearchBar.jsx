@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import cross_icon from "../assets/frontend_assets/cross_icon.png";
 import search_icon from "../assets/frontend_assets/search_icon.png";
 import { useDispatch } from "react-redux";
@@ -6,9 +6,20 @@ import { closeSearchBar } from "../slices/searchBar/searchBarSlice";
 
 const SearchBar = () => {
   const dispatch = useDispatch();
+  const [query, setQuery] = useState("");
 
   const handleCloseSearchBar = () => {
     dispatch(closeSearchBar());
+  };
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setQuery(value);
+    filterdata(value);
+  };
+
+  const filterdata = (value) => {
+    console.log(value);
   };
 
   return (
@@ -18,6 +29,7 @@ const SearchBar = () => {
           type="text"
           placeholder="Search"
           className="outline-none text-sm w-full "
+          onChange={(e) => handleInputChange(e)}
         />
         <div className="w-4">
           <img src={search_icon} alt="search_icon" className="w-4 h-4" />
