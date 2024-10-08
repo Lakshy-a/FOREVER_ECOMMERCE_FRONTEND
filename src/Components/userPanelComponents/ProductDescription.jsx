@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import star_dull_icon from "../assets/frontend_assets/star_dull_icon.png";
-import star_icon from "../assets/frontend_assets/star_icon.png";
-import { increment } from "../slices/cartData/cartSlice";
+import star_dull_icon from "../../assets/frontend_assets/star_dull_icon.png";
+import star_icon from "../../assets/frontend_assets/star_icon.png";
+import { increment } from "../../slices/cartData/cartSlice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

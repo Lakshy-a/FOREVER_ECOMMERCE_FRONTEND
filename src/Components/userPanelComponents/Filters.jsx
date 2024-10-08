@@ -4,7 +4,7 @@ import {
   removeCategory,
   addSubCategory,
   removeSubCategory,
-} from "../slices/filterData/filterSlice";
+} from "../../slices/filterData/filterSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 const Filters = ({ item }) => {

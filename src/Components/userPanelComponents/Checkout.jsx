@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import CartTotals from "./CartTotals";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import stripe_logo from "../assets/frontend_assets/stripe_logo.png";
-import razorpay_logo from "../assets/frontend_assets/razorpay_logo.png";
+import stripe_logo from "../../assets/frontend_assets/stripe_logo.png";
+import razorpay_logo from "../../assets/frontend_assets/razorpay_logo.png";
 
 // Define the Yup schema
 const schema = yup.object().shape({

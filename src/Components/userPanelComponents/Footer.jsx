@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/frontend_assets/logo.png";
+import logo from "../../assets/frontend_assets/logo.png";
 import {NavLink} from "react-router-dom"
 import ScrollToTop from "./ScrollToTop"
 

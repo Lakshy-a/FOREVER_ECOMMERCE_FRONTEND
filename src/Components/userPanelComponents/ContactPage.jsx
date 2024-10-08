@@ -1,6 +1,6 @@
 import React from "react";
 import SubscribeNow from "./SubscribeNow";
-import contact_img from "../assets/frontend_assets/contact_img.png";
+import contact_img from "../../assets/frontend_assets/contact_img.png";
 import { GoHorizontalRule } from "react-icons/go";
 
 const ContactPage = () => {

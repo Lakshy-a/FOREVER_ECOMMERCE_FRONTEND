@@ -1,5 +1,5 @@
 import React from "react";
-import hero_img from "../assets/frontend_assets/hero_img.png";
+import hero_img from "../../assets/frontend_assets/hero_img.png";
 import { GoHorizontalRule } from "react-icons/go";
 
 const Banner = () => {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import cross_icon from "../assets/frontend_assets/cross_icon.png";
-import search_icon from "../assets/frontend_assets/search_icon.png";
+import cross_icon from "../../assets/frontend_assets/cross_icon.png";
+import search_icon from "../../assets/frontend_assets/search_icon.png";
 import { useDispatch } from "react-redux";
-import { closeSearchBar } from "../slices/searchBar/searchBarSlice";
+import { closeSearchBar } from "../../slices/searchBar/searchBarSlice";
 
 const SearchBar = () => {
   const dispatch = useDispatch();

@@ -9,7 +9,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   resetFilters,
   setSortingFilter,
-} from "../slices/filterData/filterSlice";
+} from "../../slices/filterData/filterSlice";
 
 const filtersData = [
   {

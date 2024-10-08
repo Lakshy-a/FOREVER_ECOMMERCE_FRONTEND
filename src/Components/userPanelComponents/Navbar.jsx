@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import logo from "../assets/frontend_assets/logo.png";
-import cart_icon from "../assets/frontend_assets/cart_icon.png";
-import search_icon from "../assets/frontend_assets/search_icon.png";
-import profile_icon from "../assets/frontend_assets/profile_icon.png";
-import menu_icon from "../assets/frontend_assets/menu_icon.png";
+import logo from "../../assets/frontend_assets/logo.png";
+import cart_icon from "../../assets/frontend_assets/cart_icon.png";
+import search_icon from "../../assets/frontend_assets/search_icon.png";
+import profile_icon from "../../assets/frontend_assets/profile_icon.png";
+import menu_icon from "../../assets/frontend_assets/menu_icon.png";
 import MenuItem from "./MenuItem";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { openSearchBar } from "../slices/searchBar/searchBarSlice";
+import { openSearchBar } from "../../slices/searchBar/searchBarSlice";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);

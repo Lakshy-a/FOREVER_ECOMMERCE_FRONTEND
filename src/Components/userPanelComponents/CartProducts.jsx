@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { increment, decrement } from "../slices/cartData/cartSlice";
+import { increment, decrement } from "../../slices/cartData/cartSlice";
 import ProductsInsideCart from "./ProductsInsideCart";
 
 const CartProducts = () => {

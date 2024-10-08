@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import bin_icon from "../assets/frontend_assets/bin_icon.png";
-import { decrement, increment } from "../slices/cartData/cartSlice";
+import bin_icon from "../../assets/frontend_assets/bin_icon.png";
+import { decrement, increment } from "../../slices/cartData/cartSlice";
 
 const ProductsInsideCart = ({ item, index }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);

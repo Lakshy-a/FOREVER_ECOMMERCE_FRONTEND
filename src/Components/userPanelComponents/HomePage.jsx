@@ -2,9 +2,9 @@ import React from "react";
 import SubscribeNow from "./SubscribeNow";
 import Banner from "./Banner";
 import Policies from "./Policies";
-import exchange_icon from "../assets/frontend_assets/exchange_icon.png";
-import support_img from "../assets/frontend_assets/support_img.png";
-import quality_icon from "../assets/frontend_assets/quality_icon.png";
+import exchange_icon from "../../assets/frontend_assets/exchange_icon.png";
+import support_img from "../../assets/frontend_assets/support_img.png";
+import quality_icon from "../../assets/frontend_assets/quality_icon.png";
 import Bestsellers from "./Bestsellers";
 import LatestCoection from "./LatestCollections";
 

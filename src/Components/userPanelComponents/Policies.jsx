@@ -1,5 +1,5 @@
 import React from "react";
-import support_icon from "../assets/frontend_assets/support_img.png";
+import support_icon from "../../assets/frontend_assets/support_img.png";
 
 const Policies = ({policy}) => {
   return (

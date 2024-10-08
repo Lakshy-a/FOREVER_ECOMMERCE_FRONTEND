@@ -2,7 +2,7 @@ import React from "react";
 import SubscribeNow from "./SubscribeNow";
 import WhyChooseUs from "./WhyChooseUs";
 import { GoHorizontalRule } from "react-icons/go";
-import about_img from "../assets/frontend_assets/about_img.png";
+import about_img from "../../assets/frontend_assets/about_img.png";
 
 const AboutPage = () => {
   return (

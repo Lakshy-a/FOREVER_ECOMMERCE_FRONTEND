@@ -1,20 +1,20 @@
 import "./App.css";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/userPanelComponents/Navbar";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./Components/HomePage";
-import AboutPage from "./Components/AboutPage";
-import ContactPage from "./Components/ContactPage";
-import Footer from "./Components/Footer";
-import PrivacyPolicy from "./Components/PrivacyPolicy";
-import DeliveryPolicy from "./Components/DeliveryPolicy";
-import ScrollToTop from "./Components/ScrollToTop";
-import CollectionPage from "./Components/CollectionPage";
-import Login from "./Components/Login";
-import SignUp from "./Components/SignUp";
-import ForgotPassword from "./Components/ForgotPassword";
-import ProductPage from "./Components/ProductPage";
-import Cart from "./Components/Cart";
-import Checkout from "./Components/Checkout";
+import HomePage from "./Components/userPanelComponents/HomePage";
+import AboutPage from "./Components/userPanelComponents/AboutPage";
+import ContactPage from "./Components/userPanelComponents/ContactPage";
+import Footer from "./Components/userPanelComponents/Footer";
+import PrivacyPolicy from "./Components/userPanelComponents/PrivacyPolicy";
+import DeliveryPolicy from "./Components/userPanelComponents/DeliveryPolicy";
+import ScrollToTop from "./Components/userPanelComponents/ScrollToTop";
+import CollectionPage from "./Components/userPanelComponents/CollectionPage";
+import Login from "./Components/userPanelComponents/Login";
+import SignUp from "./Components/userPanelComponents/SignUp";
+import ForgotPassword from "./Components/userPanelComponents/ForgotPassword";
+import ProductPage from "./Components/userPanelComponents/ProductPage";
+import Cart from "./Components/userPanelComponents/Cart";
+import Checkout from "./Components/userPanelComponents/Checkout";
 
 function App() {
   return (
