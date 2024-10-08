@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import bin_icon from "../assets/frontend_assets/bin_icon.png";
-import { decrement } from "../slices/cartData/cartSlice";
+import { decrement, increment } from "../slices/cartData/cartSlice";
 
 const ProductsInsideCart = ({ item, index }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -12,14 +12,13 @@ const ProductsInsideCart = ({ item, index }) => {
     dispatch(decrement(id));
   };
 
-  const handleDecreaseCount = (id) => {
-    dispatch(decrement(id));
+  const handleDecreaseCount = (data) => {
+    dispatch(decrement(data));
   };
 
-  const handleIncreaseCount = () => {
-    dispatch(increment());
+  const handleIncreaseCount = (data) => {
+    dispatch(increment(data));
   };
-
 
   return (
     <div className="flex justify-between mt-8 border border-gray-300 rounded-xl overflow-hidden px-8 items-center">
@@ -36,11 +35,18 @@ const ProductsInsideCart = ({ item, index }) => {
         </div>
       </div>
       <div className="flex gap-4 items-center">
-        <span className="text-xl border border-black rounded-md px-2 cursor-pointer" onClick={() => handleDecreaseCount(index)}  id={index}>
+        <span
+          className="text-xl border border-black rounded-md px-2 cursor-pointer"
+          onClick={() => handleDecreaseCount(item)}
+          id={index}
+        >
           -
         </span>
         <span className="text-lg font-semibold">{item.productQuantity}</span>
-        <span className="text-xl border px-2 rounded-md border-black cursor-pointer" onClick={handleIncreaseCount}>
+        <span
+          className="text-xl border px-2 rounded-md border-black cursor-pointer"
+          onClick={() => handleIncreaseCount(item)}
+        >
           +
         </span>
       </div>
