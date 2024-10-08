@@ -3,7 +3,7 @@ import { GoHorizontalRule } from "react-icons/go";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
-const CartTotals = () => {
+const CartTotals = ({placeOrder}) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   let subTotal = 0;
   let shippingFee = 10;
@@ -20,13 +20,13 @@ const CartTotals = () => {
   return (
     <>
       <div className="w-full xs:w-96">
-        <div className="uppercase text-2xl text-gray-400 font-semibold flex items-center justify-start mt-8">
+        <div className="uppercase text-2xl text-gray-400 font-semibold flex items-center justify-start mt-8 xs:mt-0">
           Cart <span className="text-black ml-2">Totals</span>
           <span className="text-black ml-2">
             <GoHorizontalRule />
           </span>
         </div>
-        <div className="mt-4 flex flex-col gap-2">
+        <div className="mt-8 flex flex-col gap-2">
           <div className="flex justify-between w-full border-b border-black">
             <div className="text-sm font-semibold">Sub Total</div>
             <div className="font-semibold">$ {subTotal}</div>
@@ -43,7 +43,7 @@ const CartTotals = () => {
         </div>
         <div className="flex justify-end w-full">
           <NavLink to={"/checkout"}>
-            <button className="mt-4 uppercase bg-black text-white text-sm px-5 py-3">
+            <button className={`mt-4 uppercase bg-black hover:bg-white hover:text-black hover:border-black hover:border text-white text-sm px-5 py-3 ${placeOrder ? "bloack" : "hidden"}`}>
               Proceed To Checkout
             </button>
           </NavLink>

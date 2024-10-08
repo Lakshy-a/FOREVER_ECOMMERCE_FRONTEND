@@ -35,7 +35,7 @@ const Cart = () => {
           )}{" "}
         </div>
         <div className="flex justify-end mt-20">
-          <CartTotals />
+          <CartTotals placeOrder={true} />
         </div>
       </div>
     </>
