@@ -1,15 +1,15 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import bin_icon from "../../assets/frontend_assets/bin_icon.png";
-import { decrement, increment } from "../../slices/cartData/cartSlice";
+import { decrement, increment, removeFromCart } from "../../slices/cartData/cartSlice";
 
 const ProductsInsideCart = ({ item, index }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const total = useSelector((state) => state.cart.cartCount);
   const dispatch = useDispatch();
 
-  const handleRemoveProduct = (id) => {
-    dispatch(decrement(id));
+  const handleRemoveProduct = (data) => {
+    dispatch(removeFromCart(data));
   };
 
   const handleDecreaseCount = (data) => {
@@ -54,7 +54,7 @@ const ProductsInsideCart = ({ item, index }) => {
         <img
           id={index}
           src={bin_icon}
-          onClick={() => handleRemoveProduct(index)}
+          onClick={() => handleRemoveProduct(item)}
           className="w-5 cursor-pointer"
         />
       </div>

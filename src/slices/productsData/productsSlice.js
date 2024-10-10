@@ -798,9 +798,12 @@ export const productsSlice = createSlice({
     },
     setSearchQuery: (state, action) => {
       state.searchQuery = action.payload;
+    },
+    deleteProduct: (state, action) => {
+      state.products = state.products.filter((product) => product._id !== action.payload);
     }
   },
 });
 
-export const { addproduct, setSearchQuery } = productsSlice.actions;
+export const { addproduct, setSearchQuery, deleteProduct } = productsSlice.actions;
 export default productsSlice.reducer;

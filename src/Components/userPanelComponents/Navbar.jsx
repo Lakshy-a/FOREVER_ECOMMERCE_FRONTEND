@@ -33,6 +33,10 @@ const Navbar = () => {
     dispatch(openSearchBar());
   };
 
+  const handleAdminPanel =() => {
+    window.open('/adminPanelHomePage',  '_blank');
+  }
+
   const navigate = useNavigate();
 
   return (
@@ -58,7 +62,7 @@ const Navbar = () => {
             {name}
           </NavLink>
         ))}
-        <div className="uppercase text-xs border border-black px-3 py-1 rounded-full font-semibold text-gray-700 cursor-pointer">
+        <div className="uppercase text-xs border border-black px-3 py-1 rounded-full font-semibold text-gray-700 cursor-pointer" onClick={handleAdminPanel}> 
           Admin Panel
         </div>
       </div>
